@@ -15,6 +15,8 @@ end
 group :test do
   gem 'simplecov',   ">= 0.5",  :platform => [:ruby_19],   :require => false
   gem 'json'
+  gem 'rspec', '~> 2.14'
+  gem 'rake'
 end
 
 # Gems you would use if hacking on this gem (rather than with it)
