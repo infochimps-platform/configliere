@@ -36,10 +36,11 @@ module Configliere
       if filename.is_a?(Symbol) then raise Configliere::DeprecatedError, "Loading from a default config file is no longer provided" ; end
       filename = expand_filename(filename)
       begin
+        str = File.open(filename){ |file| file.read }
         case filetype(filename)
-        when 'json' then read_json(File.open(filename), options)
-        when 'yaml' then read_yaml(File.open(filename), options)
-        else             read_yaml(File.open(filename), options)
+        when 'json' then read_json(str, options)
+        when 'yaml' then read_yaml(str, options)
+        else             read_yaml(str, options)
         end
       rescue Errno::ENOENT
         warn "Loading empty configliere settings file #{filename}"

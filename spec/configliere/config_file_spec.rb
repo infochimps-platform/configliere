@@ -14,7 +14,9 @@ describe Configliere::ConfigFile do
     let(:file_string) { file_params.to_yaml           }
     let(:file_path)   { '/absolute/path.yaml'         }
 
-    before{ File.stub(:open).and_return(file_string) }
+    before{
+      stub_read = double(File, read: file_string)
+      File.stub(:open) { |&stub_file| stub_file.yield stub_read } }
 
     it 'returns the config object for chaining' do
       subject.read(file_path).should == subject
