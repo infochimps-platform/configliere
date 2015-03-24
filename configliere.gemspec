@@ -19,6 +19,6 @@ Gem::Specification.new do |gem|
   gem.licenses = ["Apache 2.0"]
   gem.summary = "Wise, discreet configuration management"
 
-  gem.add_dependency(%q<multi_json> , '~> 1.10.1')
+  gem.add_dependency(%q<multi_json> , '~> 1.11')
   gem.add_dependency(%q<highline>   , '1.5.2')
 end
