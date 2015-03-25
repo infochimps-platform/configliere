@@ -20,5 +20,5 @@ Gem::Specification.new do |gem|
   gem.summary = "Wise, discreet configuration management"
 
   gem.add_dependency(%q<multi_json> , '~> 1.11')
-  gem.add_dependency(%q<highline>   , '1.5.2')
+  gem.add_dependency(%q<highline>   , '1.7')
 end
