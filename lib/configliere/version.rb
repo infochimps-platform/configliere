@@ -1,3 +1,3 @@
 module Configliere
-  VERSION = '0.4.23'
+  VERSION = '0.4.26'
 end
